@@ -1,42 +1,379 @@
-#root {
-  max-width: 1280px;
+body {
+  width: 100%;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  height: 40px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin-right: 20px;
+  list-style: none; 
+}
+
+.navbar a {
+  color: black;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  color: #495E57;
+}
+
+/* Main styles */
+.callToAction {
+  background-color: #495E57;
+  padding: 20px 13%;
+  position: relative;
+}
+
+h2 {
+  font-size: 40px;
+  color: #F4CE14;
+  margin: 0;
+}
+
+h3 {
+  font-size: 25px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.banner {
+  font-size: 18px;
+  color: #ffffff;
+  max-width: 350px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.bannerImg {
+  position: absolute;
+  right: 15%;
+  top: 15%;
+  width: 280px;
+  height: 300px;
+}
+
+.bannerImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+button {
+  background-color: #F4CE14;
+  color: black;
+  padding: 14px 18px;
+  border: none;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Specials Styles */
+.specials {
+  padding: 20px 15%;
+  margin-top: 5%;
+}
+
+.specials-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.specials-title h2 {
+  color: black;
+}
+
+.specials-cards {
+  display: flex;
+  justify-content: space-around;
+  column-gap: 5%;
 }
 
 .card {
-  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 350px;
+  height: 550px; 
+  background-color: #EDEFEE;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  text-align: left;
 }
 
-.read-the-docs {
-  color: #888;
+.card img {
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px 13%;
+  flex-grow: 1; 
+}
+
+.card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-price {
+  color: #EE9972;
+}
+
+.card p {
+  color: #495E57;
+  line-height: 1.5;
+}
+
+.card-order {
+  margin-top: auto;
+}
+
+/* BookingPage Styles */
+.booking-page {
+  background-color: #495E57;
+  padding: 20px 13%;
+}
+
+.booking-page h2 {
+  text-align: center;
+  padding: 20px;
+}
+
+/* BookingForm styles */
+.booking-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.booking-form div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="date"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+select {
+  appearance: none;
+  background-color: white;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 10 5"><polygon points="0,0 5,5 10,0" fill="%23666" /></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px 5px;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.booking-btn {
+  width: 100%;
+}
+
+/* ConfirmedBooking styles */
+.Confirmed-Booking-Page {
+  background-color: #495E57;
+  padding: 20px 13%;
+}
+
+.Confirmed-Booking-Page h1 {
+  text-align: center;
+  color: #F4CE14;
+}
+
+.Confirmed-Booking-Page p {
+  text-align: center;
+  color: #fff;
+}
+
+
+/* Footer styles */
+footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 25px 15%;
+}
+
+footer .logo {
+  height: 40px;
+  align-self: center;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+footer h4 {
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: black;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #495E57;
+}
+
+
+/* Mobile styles */
+@media (max-width: 900px) {
+  header {
+    justify-content: space-between; 
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    background: white;
+    width: 100%;
+    z-index: 5;
+    padding: 10px 0;
+  }
+
+  .navbar.open {
+    display: flex;
+  }
+
+  .navbar li {
+    margin: 0;
+    text-align: center;
+  }
+
+  .navbar ul li {
+    display: block;
+  }
+
+  .navbar a {
+    padding: 10px;
+    display: block;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .bannerImg {
+    display: none;
+  }
+
+  .specials-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 5%;
+  }
+
+  footer div {
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 900px) {
+  header {
+    justify-content: center;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu-button {
+    display: none;
+  }
 }
