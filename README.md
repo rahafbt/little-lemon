@@ -3,10 +3,10 @@ The Little Lemon project is part of the Front-End Developer Capstone course for 
 This project was built using React, Vite, and Bootstrap.
 
 ## Installation
-Clone the repository
-    ```bash
+Clone the repository:
+
     git clone https://github.com/rahafbt/little-lemon.git
-    ```
+
 
 ## Setup
 To set up the project locally, follow these steps:
@@ -24,6 +24,6 @@ To set up the project locally, follow these steps:
 
 ## Run test
 Run: 
-    ```bash
+
     npm test
-    ```
+
